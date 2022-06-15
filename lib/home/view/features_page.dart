@@ -36,11 +36,14 @@ class _FeaturePage extends StatelessWidget {
           children: [
             Expanded(
               flex: 2,
-              child: Center(
-                child: Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: textStyle,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: Sizes.p12),
+                child: Center(
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: textStyle,
+                  ),
                 ),
               ),
             ),
@@ -65,7 +68,7 @@ class _FeaturePage extends StatelessWidget {
                 ],
               ),
             ),
-            gapH24,
+            gapH44,
           ],
         );
       },
@@ -79,7 +82,7 @@ class ChatFeaturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _FeaturePage(
-      title: '동네 사람들과\n관심사를 자유롭게\n이야기를 나누세요'.hardcoded,
+      title: '동네 사람들과\n관심사를 자유롭게\n이야기 나누세요'.hardcoded,
       assetPath: 'assets/images/simulation.gif',
     );
   }
