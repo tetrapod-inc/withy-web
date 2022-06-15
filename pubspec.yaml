@@ -1,0 +1,33 @@
+name: tetrapod
+description: 테트라포드 회사 홈페이지
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  auto_size_text: ^3.0.0
+  bloc: ^8.0.3
+  flex_color_scheme: ^5.0.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_svg: ^1.1.0
+  font_awesome_flutter: ^10.1.0
+  intl: ^0.17.0
+
+dev_dependencies:
+  bloc_test: ^9.0.3
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  very_good_analysis: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/
