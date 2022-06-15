@@ -16,20 +16,27 @@ class MainPage extends StatelessWidget {
         double buttonHeight;
         double imageHeight;
 
-        if (constraints.maxWidth < BreakPoint.tablet) {
-          textStyle = theme.textTheme.headlineMedium?.copyWith(
+        if (constraints.maxWidth > BreakPoint.pc) {
+          textStyle = theme.textTheme.displayMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
           );
-          buttonHeight = Sizes.p36;
-          imageHeight = 360;
-        } else {
+          buttonHeight = Sizes.p52;
+          imageHeight = 500;
+        } else if (constraints.maxWidth > BreakPoint.tablet) {
           textStyle = theme.textTheme.displaySmall?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
           );
           buttonHeight = Sizes.p52;
           imageHeight = 500;
+        } else {
+          textStyle = theme.textTheme.headlineMedium?.copyWith(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          );
+          buttonHeight = Sizes.p36;
+          imageHeight = 360;
         }
 
         return Stack(

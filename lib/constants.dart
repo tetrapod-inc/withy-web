@@ -81,4 +81,5 @@ extension M3BorderRadius on BorderRadius {
 
 class BreakPoint {
   static const tablet = 480;
+  static const pc = 900;
 }
