@@ -23,18 +23,25 @@ jobs:
       - name: 📦 Install Dependencies
         run: flutter pub get
 
-      - name: 🏗️ Build
-        run: flutter build web --target lib/main_production.dart
+      - name: Build
+        run: flutter build web --target lib/main_production.dart --base-href="/withy-web/"
 
-      - name: 🎉 Git push
+      - name: Git Commit
         run: |
-          cd withy-web/build/web
+          cd build/web
           git init
           git config --global user.email thankfather@naver.com
           git config --global user.name appano1
           git status
-          git remote add origin https://$@github.com/tetrapod-inc/withy-web.git 
+          git remote add origin https://github.com/tetrapod-inc/withy-web.git 
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
-          git push origin gh-pages -f
+
+      - name: Git Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          directory: build/web
+          force: true
