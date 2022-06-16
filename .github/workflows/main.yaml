@@ -4,7 +4,37 @@ on: [pull_request, push]
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
-    with:
-      flutter_channel: stable
-      flutter_version: 3.0.0
+    defaults:
+      run:
+        working-directory: '.'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v2
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.0.2
+          channel: stable
+          cache: true
+
+      - name: 📦 Install Dependencies
+        run: flutter pub get
+
+      - name: 🏗️ Build
+        run: flutter build web --target lib/main_production.dart
+
+      - name: 🎉 Git push
+        run: |
+          cd withy-web/build/web
+          git init
+          git config --global user.email thankfather@naver.com
+          git config --global user.name appano1
+          git status
+          git remote add origin https://$@github.com/tetrapod-inc/withy-web.git 
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
