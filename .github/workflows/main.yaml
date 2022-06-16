@@ -24,7 +24,7 @@ jobs:
         run: flutter pub get
 
       - name: Build
-        run: flutter build web --target lib/main_production.dart --base-href="/withy-web/"
+        run: flutter build web --target lib/main_production.dart 
 
       - name: Git Commit
         run: |
