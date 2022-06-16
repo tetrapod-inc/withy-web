@@ -1,47 +1,38 @@
-name: tetrapod
+name: GitHub Pages
 
 on: [pull_request, push]
 
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: '.'
-
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     runs-on: ubuntu-latest
-    steps:
-      - name: 📚 Git Checkout
-        uses: actions/checkout@v2
 
-      - name: 🐦 Setup Flutter
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: 3.0.2
           channel: stable
           cache: true
 
-      - name: 📦 Install Dependencies
+      - name: Install Dependencies
         run: flutter pub get
 
       - name: Build
-        run: flutter build web --target lib/main_production.dart 
+        run: flutter build web --target lib/main_production.dart --web-renderer html
 
-      - name: Git Commit
-        run: |
-          cd build/web
-          git init
-          git config --global user.email thankfather@naver.com
-          git config --global user.name appano1
-          git status
-          git remote add origin https://github.com/tetrapod-inc/withy-web.git 
-          git checkout -b gh-pages
-          git add --all
-          git commit -m "update"
-
-      - name: Git Push
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          directory: build/web
-          force: true
+          publish_dir: build/web
+          cname: www.tetrapod.co.kr
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
