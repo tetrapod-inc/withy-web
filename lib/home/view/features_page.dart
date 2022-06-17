@@ -57,7 +57,9 @@ class _FeaturePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12),
                     child: ClipRRect(
-                      borderRadius: M3BorderRadius.large,
+                      borderRadius: screenWidth > BreakPoint.tablet
+                          ? M3BorderRadius.extraLarge
+                          : M3BorderRadius.large,
                       child: Image.asset(
                         assetPath,
                       ),

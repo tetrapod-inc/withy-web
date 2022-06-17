@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
       ),
       body: PageView(
         scrollDirection: Axis.vertical,
-        controller: PageController(initialPage: HomePageTab.feed.index),
+        controller: PageController(initialPage: HomePageTab.main.index),
         children: const [
           MainPage(),
           ChatFeaturePage(),
