@@ -9,6 +9,14 @@ import 'package:flutter/material.dart';
 import 'package:tetrapod/constants.dart';
 import 'package:tetrapod/home/view/view.dart';
 
+enum HomePageTab {
+  main,
+  chat,
+  feed,
+  roadMap,
+  marketing,
+}
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -39,7 +47,7 @@ class HomeView extends StatelessWidget {
       ),
       body: PageView(
         scrollDirection: Axis.vertical,
-        controller: PageController(),
+        controller: PageController(initialPage: HomePageTab.feed.index),
         children: const [
           MainPage(),
           ChatFeaturePage(),
