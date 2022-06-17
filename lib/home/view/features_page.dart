@@ -20,7 +20,9 @@ class _FeaturePage extends StatelessWidget {
       builder: (context, constraints) {
         TextStyle? textStyle;
 
-        if (constraints.maxWidth < BreakPoint.tablet) {
+        final screenWidth = constraints.maxWidth;
+
+        if (screenWidth < BreakPoint.tablet) {
           textStyle = theme.textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -35,7 +37,7 @@ class _FeaturePage extends StatelessWidget {
         return Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 5,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: Sizes.p12),
                 child: Center(
@@ -47,9 +49,8 @@ class _FeaturePage extends StatelessWidget {
                 ),
               ),
             ),
-            gapH12,
             Expanded(
-              flex: 5,
+              flex: 15,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
@@ -68,7 +69,7 @@ class _FeaturePage extends StatelessWidget {
                 ],
               ),
             ),
-            gapH44,
+            gapH32,
           ],
         );
       },
@@ -94,7 +95,7 @@ class FeedFeaturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _FeaturePage(
-      title: '친구들과 정보를 공유하고\n더 많은 이야기를 나눠보세요'.hardcoded,
+      title: '정보를 공유하고\n더 많은 이야기를\n나눠보세요'.hardcoded,
       assetPath: 'assets/images/simulation2.gif',
     );
   }

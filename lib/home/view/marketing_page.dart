@@ -37,7 +37,7 @@ class MarketingPage extends StatelessWidget {
             color: Colors.black,
             child: Column(
               children: [
-                gapH120,
+                const Spacer(),
                 Text(
                   '위디와 함께\n사업을 극대화 시켜보세요'.hardcoded,
                   textAlign: TextAlign.center,
@@ -66,7 +66,6 @@ class MarketingPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                gapH40,
                 const Spacer(),
                 const _BottomBar(),
               ],

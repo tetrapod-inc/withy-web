@@ -42,7 +42,7 @@ class RoadMapPage extends StatelessWidget {
 
           return Column(
             children: [
-              gapH120,
+              const Spacer(),
               Text(
                 '앞으로 위디는\n어떻게 발전할까요?'.hardcoded,
                 textAlign: TextAlign.center,
@@ -98,7 +98,7 @@ class RoadMapPage extends StatelessWidget {
                   ],
                 ),
               ),
-              gapH40,
+              const Spacer(),
             ],
           );
         },
