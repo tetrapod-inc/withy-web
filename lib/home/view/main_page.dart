@@ -73,7 +73,7 @@ class MainPage extends StatelessWidget {
                 children: [
                   const SizedBox(height: 120),
                   Text(
-                    '취미나 관심사를\n동네 사람들과 자유롭게'.hardcoded,
+                    '취미나 관심사를\n지역 사람들과 자유롭게'.hardcoded,
                     textAlign: TextAlign.center,
                     style: textStyle,
                   ),

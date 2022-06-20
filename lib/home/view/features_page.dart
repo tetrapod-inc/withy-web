@@ -85,7 +85,7 @@ class ChatFeaturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _FeaturePage(
-      title: '동네 사람들과\n관심사를 자유롭게\n이야기 나누세요'.hardcoded,
+      title: '지역 사람들과\n관심사에 대한 이야기를\n자유롭게 나누세요'.hardcoded,
       assetPath: 'assets/images/simulation.gif',
     );
   }

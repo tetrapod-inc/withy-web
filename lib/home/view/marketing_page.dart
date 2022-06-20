@@ -61,7 +61,7 @@ class MarketingPage extends StatelessWidget {
                     ),
                     _Card(
                       icon: const Icon(Icons.email),
-                      text: 'goalpae@gmail.com',
+                      text: 'sales.tetrapod@gmail.com',
                       group: autoSizeGroup,
                     ),
                   ],
@@ -139,15 +139,15 @@ class _BottomBar extends StatelessWidget {
             style: style,
           ),
           gapH8,
-          Text(
-            '사업자 번호: -'.hardcoded,
-            style: style,
-          ),
-          Text(
-            '통신판매업: '.hardcoded,
-            style: style,
-          ),
-          gapH8,
+          // Text(
+          //   '사업자 번호: -'.hardcoded,
+          //   style: style,
+          // ),
+          // Text(
+          //   '통신판매업: '.hardcoded,
+          //   style: style,
+          // ),
+          // gapH8,
           Text(
             'TEL: 02-6925-1112'.hardcoded,
             style: style,
@@ -157,7 +157,7 @@ class _BottomBar extends StatelessWidget {
             style: style,
           ),
           Text(
-            'MAIL: help@gmail.com'.hardcoded,
+            'MAIL: sales.tetrapod@gmail.com'.hardcoded,
             style: style,
           ),
         ],
