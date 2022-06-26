@@ -15,6 +15,7 @@ class _FeaturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final textColor = theme.textTheme.bodyMedium?.color;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -24,12 +25,12 @@ class _FeaturePage extends StatelessWidget {
 
         if (screenWidth < BreakPoint.tablet) {
           textStyle = theme.textTheme.headlineMedium?.copyWith(
-            color: Colors.black,
+            color: textColor,
             fontWeight: FontWeight.bold,
           );
         } else {
           textStyle = theme.textTheme.displaySmall?.copyWith(
-            color: Colors.black,
+            color: textColor,
             fontWeight: FontWeight.bold,
           );
         }

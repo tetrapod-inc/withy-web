@@ -7,6 +7,7 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
+  auto_route: ^4.0.1
   auto_size_text: ^3.0.0
   bloc: ^8.0.3
   flex_color_scheme: ^5.0.1
@@ -15,12 +16,17 @@ dependencies:
   flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
+  flutter_markdown: ^0.6.10+2
   flutter_svg: ^1.1.0
   font_awesome_flutter: ^10.1.0
   intl: ^0.17.0
+  markdown: ^5.0.0
+  path_provider: ^2.0.11
 
 dev_dependencies:
+  auto_route_generator: ^4.0.0
   bloc_test: ^9.0.3
+  build_runner: ^2.1.11
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
@@ -31,3 +37,4 @@ flutter:
   generate: true
   assets:
     - assets/images/
+    - assets/text/privacy.md
