@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tetrapod/constants.dart';
-import 'package:tetrapod/extensions.dart';
+import 'package:tetrapod/common/common.dart';
 
 class RoadMapPage extends StatelessWidget {
   const RoadMapPage({super.key});

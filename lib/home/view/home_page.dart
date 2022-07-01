@@ -6,7 +6,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:flutter/material.dart';
-import 'package:tetrapod/constants.dart';
+import 'package:tetrapod/common/common.dart';
 import 'package:tetrapod/home/view/view.dart';
 
 enum HomePageTab {

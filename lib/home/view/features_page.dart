@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:tetrapod/constants.dart';
-import 'package:tetrapod/extensions.dart';
+import 'package:tetrapod/common/common.dart';
 
 class _FeaturePage extends StatelessWidget {
   const _FeaturePage({

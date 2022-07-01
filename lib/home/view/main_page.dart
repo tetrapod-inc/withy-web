@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tetrapod/constants.dart';
-import 'package:tetrapod/extensions.dart';
+import 'package:tetrapod/common/common.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
