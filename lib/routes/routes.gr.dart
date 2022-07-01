@@ -23,13 +23,18 @@ class _$AppRouter extends RootStackRouter {
     PrivacyRoute.name: (routeData) {
       return MaterialPageX<void>(
           routeData: routeData, child: const PrivacyPage());
+    },
+    PolicyRoute.name: (routeData) {
+      return MaterialPageX<void>(
+          routeData: routeData, child: const PolicyPage());
     }
   };
 
   @override
   List<RouteConfig> get routes => [
         RouteConfig(HomeRoute.name, path: '/'),
-        RouteConfig(PrivacyRoute.name, path: '/privacy')
+        RouteConfig(PrivacyRoute.name, path: '/privacy'),
+        RouteConfig(PolicyRoute.name, path: '/policy')
       ];
 }
 
@@ -47,4 +52,12 @@ class PrivacyRoute extends PageRouteInfo<void> {
   const PrivacyRoute() : super(PrivacyRoute.name, path: '/privacy');
 
   static const String name = 'PrivacyRoute';
+}
+
+/// generated route for
+/// [PolicyPage]
+class PolicyRoute extends PageRouteInfo<void> {
+  const PolicyRoute() : super(PolicyRoute.name, path: '/policy');
+
+  static const String name = 'PolicyRoute';
 }

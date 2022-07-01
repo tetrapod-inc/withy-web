@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:tetrapod/home/home.dart';
+import 'package:tetrapod/policy/policy.dart';
 import 'package:tetrapod/privacy/privacy.dart';
 
 part 'routes.gr.dart';
@@ -16,6 +17,10 @@ part 'routes.gr.dart';
     AutoRoute<void>(
       path: '/privacy',
       page: PrivacyPage,
+    ),
+    AutoRoute<void>(
+      path: '/policy',
+      page: PolicyPage,
     ),
   ],
 )
