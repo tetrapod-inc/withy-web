@@ -38,3 +38,4 @@ flutter:
   assets:
     - assets/images/
     - assets/text/privacy.md
+    - assets/text/policy.md
