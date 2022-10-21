@@ -18,30 +18,50 @@ class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     HomeRoute.name: (routeData) {
-      return MaterialPageX<void>(routeData: routeData, child: const HomePage());
+      return MaterialPageX<void>(
+        routeData: routeData,
+        child: const HomePage(),
+      );
     },
     PrivacyRoute.name: (routeData) {
       return MaterialPageX<void>(
-          routeData: routeData, child: const PrivacyPage());
+        routeData: routeData,
+        child: const PrivacyPage(),
+      );
     },
     PolicyRoute.name: (routeData) {
       return MaterialPageX<void>(
-          routeData: routeData, child: const PolicyPage());
-    }
+        routeData: routeData,
+        child: const PolicyPage(),
+      );
+    },
   };
 
   @override
   List<RouteConfig> get routes => [
-        RouteConfig(HomeRoute.name, path: '/'),
-        RouteConfig(PrivacyRoute.name, path: '/privacy'),
-        RouteConfig(PolicyRoute.name, path: '/policy')
+        RouteConfig(
+          HomeRoute.name,
+          path: '/',
+        ),
+        RouteConfig(
+          PrivacyRoute.name,
+          path: '/privacy',
+        ),
+        RouteConfig(
+          PolicyRoute.name,
+          path: '/policy',
+        ),
       ];
 }
 
 /// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/');
+  const HomeRoute()
+      : super(
+          HomeRoute.name,
+          path: '/',
+        );
 
   static const String name = 'HomeRoute';
 }
@@ -49,7 +69,11 @@ class HomeRoute extends PageRouteInfo<void> {
 /// generated route for
 /// [PrivacyPage]
 class PrivacyRoute extends PageRouteInfo<void> {
-  const PrivacyRoute() : super(PrivacyRoute.name, path: '/privacy');
+  const PrivacyRoute()
+      : super(
+          PrivacyRoute.name,
+          path: '/privacy',
+        );
 
   static const String name = 'PrivacyRoute';
 }
@@ -57,7 +81,11 @@ class PrivacyRoute extends PageRouteInfo<void> {
 /// generated route for
 /// [PolicyPage]
 class PolicyRoute extends PageRouteInfo<void> {
-  const PolicyRoute() : super(PolicyRoute.name, path: '/policy');
+  const PolicyRoute()
+      : super(
+          PolicyRoute.name,
+          path: '/policy',
+        );
 
   static const String name = 'PolicyRoute';
 }
