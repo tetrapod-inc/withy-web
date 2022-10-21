@@ -60,7 +60,7 @@ class MarketingPage extends StatelessWidget {
                     ),
                     _Card(
                       icon: const Icon(Icons.email),
-                      text: 'sales.tetrapod@gmail.com',
+                      text: 'laon@ai-doop.com',
                       group: autoSizeGroup,
                     ),
                   ],
@@ -130,11 +130,11 @@ class _BottomBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '(주)테트라포드'.hardcoded,
+            '(주)AIdoop'.hardcoded,
             style: style,
           ),
           Text(
-            '서울시 금천구 벚꽃로 286, 삼성리더스타워 11층 1107호, IF-04'.hardcoded,
+            '서울특별시 종로구 종로22길 17, 2F'.hardcoded,
             style: style,
           ),
           gapH8,
@@ -156,7 +156,7 @@ class _BottomBar extends StatelessWidget {
             style: style,
           ),
           Text(
-            'MAIL: sales.tetrapod@gmail.com'.hardcoded,
+            'MAIL: laon@ai-doop.com'.hardcoded,
             style: style,
           ),
         ],
